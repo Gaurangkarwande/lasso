@@ -9,8 +9,10 @@ def normalization(X):
     X_norm = (X - mu) / sigma
     return X_norm / np.linalg.norm(X_norm, axis=0)
 
+
 def predict(X, beta):
     return np.dot(X, beta)
+
 
 class CoordinateDescent:
     def __init__(self, lamda, max_iters):
